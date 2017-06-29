@@ -1,5 +1,6 @@
 package com.kavsoftware.kaveer.activitytransition.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -21,9 +22,13 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                    Toast messageBox = Toast.makeText(HomeActivity.this , "About us" , Toast.LENGTH_SHORT);
-                    messageBox.show();
-                    return;
+                Intent aboutUs = new Intent(HomeActivity.this, AboutUs.class);
+                startActivity(aboutUs);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+
+//                Toast messageBox = Toast.makeText(HomeActivity.this , "About us" , Toast.LENGTH_SHORT);
+//                messageBox.show();
+//                return;
 
             }
         });
@@ -32,6 +37,9 @@ public class HomeActivity extends AppCompatActivity {
         contactUs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                Intent contactUs = new Intent(HomeActivity.this, ContactUs.class);
+                startActivity(contactUs);
 
                 Toast messageBox = Toast.makeText(HomeActivity.this , "Contact us" , Toast.LENGTH_SHORT);
                 messageBox.show();
