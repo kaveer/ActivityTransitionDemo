@@ -5,12 +5,12 @@ import android.os.Bundle;
 
 import com.kavsoftware.kaveer.activitytransition.R;
 
-public class AboutUs extends AppCompatActivity {
+public class secondActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about_us);
-        setTitle("About Us");
+        setContentView(R.layout.activity_second);
+        setTitle("Second page");
     }
 }

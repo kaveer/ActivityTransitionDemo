@@ -4,8 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.ImageButton;
-import android.widget.Toast;
+import android.widget.Button;
 
 import com.kavsoftware.kaveer.activitytransition.R;
 
@@ -15,37 +14,32 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        setTitle("HomePage");
+        setTitle("Home Page");
 
-        ImageButton aboutUs   = (ImageButton) findViewById(R.id.btnAboutUs);
-        aboutUs.setOnClickListener(new View.OnClickListener() {
+        Button fadeInFadeOut   = (Button) findViewById(R.id.fadeIn);
+        fadeInFadeOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent aboutUs = new Intent(HomeActivity.this, AboutUs.class);
-                startActivity(aboutUs);
+                Intent activity = new Intent(HomeActivity.this, secondActivity.class);
+                startActivity(activity);
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 
-//                Toast messageBox = Toast.makeText(HomeActivity.this , "About us" , Toast.LENGTH_SHORT);
-//                messageBox.show();
-//                return;
-
             }
         });
 
-        ImageButton contactUs   = (ImageButton) findViewById(R.id.btnContactUs);
-        contactUs.setOnClickListener(new View.OnClickListener() {
+        Button slideInLeft   = (Button) findViewById(R.id.slideInLeft);
+        slideInLeft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent contactUs = new Intent(HomeActivity.this, ContactUs.class);
-                startActivity(contactUs);
-
-                Toast messageBox = Toast.makeText(HomeActivity.this , "Contact us" , Toast.LENGTH_SHORT);
-                messageBox.show();
-                return;
+                Intent activity = new Intent(HomeActivity.this, secondActivity.class);
+                startActivity(activity);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
 
             }
         });
+
+
     }
 }
