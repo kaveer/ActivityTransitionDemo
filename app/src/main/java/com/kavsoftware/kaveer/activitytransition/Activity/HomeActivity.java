@@ -40,6 +40,41 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        Button slideOutLeft   = (Button) findViewById(R.id.slide_out_left);
+        slideOutLeft.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent activity = new Intent(HomeActivity.this, secondActivity.class);
+                startActivity(activity);
+                overridePendingTransition(R.anim.slide_out_left, R.anim.slide_in_right);
+
+            }
+        });
+
+        Button slideInRight   = (Button) findViewById(R.id.slide_in_right);
+        slideInRight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent activity = new Intent(HomeActivity.this, secondActivity.class);
+                startActivity(activity);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+
+            }
+        });
+
+        Button slideOutRight   = (Button) findViewById(R.id.slide_out_right);
+        slideOutRight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent activity = new Intent(HomeActivity.this, secondActivity.class);
+                startActivity(activity);
+                overridePendingTransition(R.anim.slide_out_right, R.anim.slide_in_left);
+
+            }
+        });
 
     }
 }
