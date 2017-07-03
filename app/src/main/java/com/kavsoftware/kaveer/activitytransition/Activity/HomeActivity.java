@@ -16,6 +16,7 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         setTitle("Home Page");
 
+        //fade in button
         Button fadeInFadeOut   = (Button) findViewById(R.id.fadeIn);
         fadeInFadeOut.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,6 +29,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        //slide in left button
         Button slideInLeft   = (Button) findViewById(R.id.slideInLeft);
         slideInLeft.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +42,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        //slide out left button
         Button slideOutLeft   = (Button) findViewById(R.id.slide_out_left);
         slideOutLeft.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +55,8 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+
+        //slide in right button
         Button slideInRight   = (Button) findViewById(R.id.slide_in_right);
         slideInRight.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,6 +69,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        //slide out right button
         Button slideOutRight   = (Button) findViewById(R.id.slide_out_right);
         slideOutRight.setOnClickListener(new View.OnClickListener() {
             @Override
